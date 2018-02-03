@@ -13,9 +13,45 @@
 		<h1>ATTENDENCE LOGIN PAGE</h1>
 	</div>
 
-	<div class="btn-container">
-		<button class="official">OFFICIAL LOGIN	</button>
+	<div class="btn-container" >
+		<button class="official" onclick="display();">OFFICIAL LOGIN	</button>
 		<button class="student">STUDENT LOGIN </button>
 	</div>
+	<div id="form-official" class="form-container" onkeydown="events(event);">
+		<form>
+			<p>
+				<label for="u-name">ID</label>
+				<input type="text" name="ID" id="u-name" placeholder="Enter Staff ID">
+				<label for="pwd">PASSWORD</label>
+				<input type="text" name="Password" id="" class="pwd" placeholder="Enter Password">
+				<button type="submit" id="login">Login</button>
+				<button id="cancel" onclick="document.getElementById('form-official').style.display = 'none' ;">Cancel</button>
+			</p>
+		</form>
+	</div>
+
+	<script>
+		var form = document.getElementById('form-official');
+		var cancel = document.getElementById('cancel');
+		function events(event) {
+			if (event.which == 27) {
+				close();
+			}
+		}
+
+		window.onclick = function (event) {
+			if (event.target == form) {
+				form.style.display='none';
+			}
+		}
+
+		function close() {
+			form.style.display = 'none';
+		}
+
+		function display() {
+			form.style.display = "block";
+		}
+	</script>
 </body>
 </html>
