@@ -14,8 +14,8 @@
 	</div>
 
 	<div class="btn-container" >
-		<button class="official" onclick="display();">OFFICIAL LOGIN	</button>
-		<button class="student">STUDENT LOGIN </button>
+		<button class="official"  data-form="form-official" onclick="find(this.getAttribute('data-form')); display();">OFFICIAL LOGIN	</button>
+		<button class="student" data-form="form-student" onclick="find(this.getAttribute('data-form')); display();">STUDENT LOGIN </button>
 	</div>
 	<div id="form-official" class="form-container">
 		<form>
@@ -23,21 +23,36 @@
 				<label for="u-name">ID</label>
 				<input type="text" name="ID" id="u-name" placeholder="Enter Staff ID">
 				<label for="pwd">PASSWORD</label>
-				<input type="text" name="Password" id="" class="pwd" placeholder="Enter Password">
+				<input type="text" name="Password" id="pass" class="pwd" placeholder="Enter Password">
 				<button type="submit" id="login">Login</button>
-				<button id="cancel" onclick="document.getElementById('form-official').style.display = 'none' ;">Cancel</button>
+				<button id="cancel" onclick="close();">Cancel</button>
+			</p>
+		</form>
+	</div>
+
+		<div id="form-student" class="form-container">
+		<form>
+			<p>
+				<label for="u-name">ID</label>
+				<input type="text" name="ID" id="su-name" placeholder="Enter Student Id">
+				<label for="pwd">PASSWORD</label>
+				<input type="text" name="Password" id="s-pass" class="pwd" placeholder="Enter Password">
+				<button type="submit" id="login">Login</button>
+				<button id="cancel" onclick="close();">Cancel</button>
 			</p>
 		</form>
 	</div>
 
 	<script>
-		var form = document.getElementById('form-official');
+
+		var form;
 		var cancel = document.getElementById('cancel');
-		// function events(event) {
-		// 	if (event.which == 27) {
-		// 		close();
-		// 	}
-		// }
+		
+		function find(a) {
+			form = document.getElementById(a);
+			
+		}
+
 
 		window.onkeydown = function (event) {
 			if (event.which == 27) {
@@ -56,7 +71,7 @@
 		}
 
 		function display() {
-			form.style.display = "block";
+			form.style.display = 'block';
 		}
 	</script>
 </body>
