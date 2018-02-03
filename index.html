@@ -17,7 +17,7 @@
 		<button class="official" onclick="display();">OFFICIAL LOGIN	</button>
 		<button class="student">STUDENT LOGIN </button>
 	</div>
-	<div id="form-official" class="form-container" onkeydown="events(event);">
+	<div id="form-official" class="form-container">
 		<form>
 			<p>
 				<label for="u-name">ID</label>
@@ -33,7 +33,13 @@
 	<script>
 		var form = document.getElementById('form-official');
 		var cancel = document.getElementById('cancel');
-		function events(event) {
+		// function events(event) {
+		// 	if (event.which == 27) {
+		// 		close();
+		// 	}
+		// }
+
+		window.onkeydown = function (event) {
 			if (event.which == 27) {
 				close();
 			}
@@ -41,7 +47,7 @@
 
 		window.onclick = function (event) {
 			if (event.target == form) {
-				form.style.display='none';
+				close();
 			}
 		}
 
