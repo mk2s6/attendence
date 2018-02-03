@@ -60,7 +60,7 @@ button:hover {
 	background: linear-gradient(120deg, #00FFB1FF, #0086FFFF);
     margin: 15% auto 50% auto;  
     border: 1px solid #888;
-    width: 80%;
+    width: 0%;
     padding: 16px;
     text-align: center;
 }
@@ -85,7 +85,7 @@ input[type=text], input[type=password] {
     width: 40%!important;;
 }
 
-	@media screen and (max-width: 870px) {
+@media screen and (max-width: 870px) {
 	* {
 		margin: 0;
 		padding: 0;
@@ -106,7 +106,7 @@ input[type=text], input[type=password] {
 		width: 100%;
 		color: #fff;
 		font-weight: 700;
-		font-size: 32px;
+		font-size: 24px;
 	}	
 
 	.btn-container {
@@ -122,7 +122,7 @@ input[type=text], input[type=password] {
 		color: purple;
 		width: 150px;
 		display: block;
-		font-size: 24px;
+		font-size: 16px;
 		background: linear-gradient(#456789, #89abcd);
 		border: 0;
 		margin: 10px;
