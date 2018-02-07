@@ -1,0 +1,29 @@
+{
+  "name": "attendence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivakusimk6/attendence.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivakusimk6/attendence/issues"
+  },
+  "homepage": "https://github.com/sivakusimk6/attendence#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Adding student</title>
+</head>
+<body>
+	<form id="addstudent">
+		<p>Student Id : <input type="text" name="roll_no" required></p>
+		<p>Student Name: <input type="text" name="name" required></p>
+		<p>DOB: <input type="date" required></p>
+		<p>Department: 
+			<select name="Department" id="dept_id" required>
+				<option value="">Select Depatment</option>
+				<option value="01">CIVIL</option>
+				<option value="02">EEE</option>
+				<option value="03">MECH</option>
+				<option value="04">ECE</option>
+				<option value="05">CSE</option>
+			</select>
+		</p>
+		<p>Year : 
+			<select name="year" id="year" required>
+				<option value="">Select Year</option>
+				<option value="1">first year</option>
+				<option value="2">second year</option>
+				<option value="3">third year</option>
+				<option value="4">fourth year</option>
+			</select>
+		</p>
+		<button type="submit" id="add">ADD STUDENT</button>
+	</form>
+	<script src="jq.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+<!-- 	<script>
+		$(document).ready(function($) {
+			var x = $('#dept_id');
+			console.log(x.val());
+			var y = $('#add');
+			var z = $('input[type = date]');
+			console.log(y);
+			y.click(function() {
+				console.log(x.val());
+				console.log(z.val());
+			});
+
+		});
+	</script> -->
+</body>
+</html>
