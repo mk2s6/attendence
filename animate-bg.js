@@ -58,8 +58,8 @@ function Circle (x, y, dx , dy, radius, color) {
 
 var circleArray = [];
 function init () {
-	
-	for (var i = 0; i < 250; i++) {
+	circleArray = [];
+	for (var i = 0; i < 150; i++) {
 		
 		var radius = (Math.random() * 15) + 1;
 		var x = Math.random() * (innerWidth - (radius * 2)) + radius;
@@ -73,8 +73,8 @@ function init () {
 }
 
 console.log(circleArray);
+init();
 animate();
- init();
 function animate () {
 
 
