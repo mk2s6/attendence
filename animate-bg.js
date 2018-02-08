@@ -61,7 +61,7 @@ function init () {
 	circleArray = [];
 	for (var i = 0; i < 100; i++) {
 		
-		var radius = (Math.random() * 15) + 1;
+		var radius = (Math.random() * 15) + 4;
 		var x = Math.random() * (innerWidth - (radius * 2)) + radius;
 		var y = Math.random() * (innerHeight - (radius * 2)) + radius;
 		var dx = (Math.random() - 0.5) * 10 + 1;
@@ -73,7 +73,7 @@ function init () {
 }
 
 console.log(circleArray);
-init();
+ init();
 animate();
 function animate () {
 
